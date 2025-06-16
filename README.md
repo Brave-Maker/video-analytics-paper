@@ -2,7 +2,7 @@
 
 ## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
 
-本文由哥廷根大学完成，发表在 INFOCOM 2023。代码见：https://github.com/mi150/AccDecoder
+** 本文由哥廷根大学完成，发表在 INFOCOM 2023。代码见：https://github.com/mi150/AccDecoder **
 
 ### 1. 需要解决的问题
 
@@ -33,7 +33,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 
 
 ## Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation
-本文由哥廷根大学和南京大学共同完成，发表在 TON 2024 ,是 AccDecoder（INFOCOM 2023） 的扩展。
+** 本文由哥廷根大学和南京大学共同完成，发表在 TON 2024 ,是 AccDecoder（INFOCOM 2023） 的扩展。 **
 
 ### 1.动机： 处理来自不同摄像头或自适应编码器（如 AWStream, Pensieve, Chameleon）的异构分辨率视频流。
 
