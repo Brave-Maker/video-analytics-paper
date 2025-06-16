@@ -32,6 +32,21 @@ AccDecoder 将视频分析流程分为三个步骤：
 - **奖励（Reward）**：智能体根据在给定时延约束下的分析准确率，来衡量策略好坏，目标是最大化准确率。
 
 
+## Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation
+本文由哥廷根大学和南京大学共同完成，发表在 TON 2024 ,是 AccDecoder（INFOCOM 2023） 的扩展。
+
+### 动机： 处理来自不同摄像头或自适应编码器（如 AWStream, Pensieve, Chameleon）的异构分辨率视频流。
+
+- **核心改进**： 在 DRL 调度器的状态 (State) 中显式加入视频块的分辨率信息。
+
+### 效果： 调度器能学习针对不同分辨率块的最优阈值设置。
+
+- **对低分辨率块**：倾向于选择更多帧做 SR（成本相对低，精度提升潜力大）。
+
+- **对高分辨率块**：更谨慎选择 SR 帧（成本高）。
+
+### 优势： 显著提升了 AccDecoder 的通用性 (Generality) 和可扩展性 (Scalability)，能更好适应实际中多源、自适应码率的视频流。
+
 
 
 
