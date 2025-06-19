@@ -1,6 +1,6 @@
 # video-analytics-paper
 
-## 📚 目录（Table of Contents）
+## 📚 目录
 
 - [AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics](#accdecoder-accelerated-decoding-for-neural-enhanced-video-analytics)
 - [Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation](#accelerated-neural-enhancement-for-video-analytics-with-video-quality-adaptation)
