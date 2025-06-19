@@ -4,7 +4,7 @@
 
 - [AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics](#accdecoder-accelerated-decoding-for-neural-enhanced-video-analytics)
 - [Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation](#accelerated-neural-enhancement-for-video-analytics-with-video-quality-adaptation)
-- [Spatialyze: Spatialyze A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatia-video-analytics-system-with-spatial-aware-Optimizations)
+- [Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatia-video-analytics-system-with-spatial-aware-Optimizations)
 
 
 
@@ -56,7 +56,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 ### 3.优势： 显著提升了 AccDecoder 的通用性 (Generality) 和可扩展性 (Scalability)，能更好适应实际中多源、自适应码率的视频流。
 
 
-## Spatialyze: 空间感知优化的视频分析系统  
+## Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations  
 **本文由 UC Berkeley 完成，发表在 VLDB 2024，项目主页见 https://spatialyze.github.io/**
 
 ### 1. 动机：传统视频分析系统未充分利用摄像头元数据（如地理位置、时间、姿态等）
