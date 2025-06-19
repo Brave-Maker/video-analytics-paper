@@ -4,7 +4,7 @@
 
 - [AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics](#accdecoder-accelerated-decoding-for-neural-enhanced-video-analytics)
 - [Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation](#accelerated-neural-enhancement-for-video-analytics-with-video-quality-adaptation)
-- [Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatia-video-analytics-system-with-spatial-aware-Optimizations)
+- [Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatial-video-analytics-system-with-spatial-aware-optimizations)
 
 
 
