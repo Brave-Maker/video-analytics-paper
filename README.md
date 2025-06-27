@@ -8,7 +8,7 @@
 
 
 
-## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
+## 📃 AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
 
 **本文由哥廷根大学完成，发表在 INFOCOM 2023。代码见：https://github.com/mi150/AccDecoder**
 
@@ -40,7 +40,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 - **奖励（Reward）**：智能体根据在给定时延约束下的分析准确率，来衡量策略好坏，目标是最大化准确率。
 
 
-## Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation
+## 📃 Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation
 **本文由哥廷根大学和南京大学共同完成，发表在 TON 2024 ,是 AccDecoder（INFOCOM 2023） 的扩展。**
 
 ### 1.动机： 处理来自不同摄像头或自适应编码器（如 AWStream, Pensieve, Chameleon）的异构分辨率视频流。
@@ -56,7 +56,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 ### 3.优势： 显著提升了 AccDecoder 的通用性 (Generality) 和可扩展性 (Scalability)，能更好适应实际中多源、自适应码率的视频流。
 
 
-## Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations  
+## 📃 Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations  
 **本文由 UC Berkeley 完成，发表在 VLDB 2024，项目主页见 https://spatialyze.github.io/**
 
 ### 1. 动机：传统视频分析系统未充分利用摄像头元数据（如地理位置、时间、姿态等）
