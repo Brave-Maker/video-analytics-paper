@@ -105,7 +105,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 - **视频修复与插值**：在修复任务上平均带来 **1.9-4.2 dB** 的性能提升，并在插值任务上表现更优。
 
 
-### ## Region-based Content Enhancement for Efficient Video Analytics at the Edge (面向边缘高效视频分析的基于区域的内容增强)
+## Region-based Content Enhancement for Efficient Video Analytics at the Edge (面向边缘高效视频分析的基于区域的内容增强)
 **本文由清华大学、南京大学、哥廷根大学等机构合作完成，发表在  NSDI '25。项目主页见 https://github.com/mi150/RegenHance**
 
 ### 1. 动机：现有内容增强方法在边缘视频分析中存在性能瓶颈
