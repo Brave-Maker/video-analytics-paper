@@ -6,7 +6,7 @@
 - [Accelerated Neural Enhancement for Video Analytics With Video Quality Adaptation](#accelerated-neural-enhancement-for-video-analytics-with-video-quality-adaptation)
 - [Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatial-video-analytics-system-with-spatial-aware-optimizations)
 - [Boosting Neural Representations for Videos with a Conditional Decoder](#boosting-neural-representations-for-videos-with-a-conditional-decoder)
-
+- [Region-based Content Enhancement for Efficient Video Analytics at the Edge](#region-based-content-enhancement-for-efficient-video-analytics-at-the-edge)
 
 ## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
 
@@ -105,5 +105,26 @@ AccDecoder 将视频分析流程分为三个步骤：
 - **视频修复与插值**：在修复任务上平均带来 **1.9-4.2 dB** 的性能提升，并在插值任务上表现更优。
 
 
+### ## Region-based Content Enhancement for Efficient Video Analytics at the Edge (面向边缘高效视频分析的基于区域的内容增强)
+**本文由清华大学、南京大学、哥廷根大学等机构合作完成，发表在  NSDI '25。项目主页见 https://github.com/mi150/RegenHance**
 
+### 1. 动机：现有内容增强方法在边缘视频分析中存在性能瓶颈
+
+- **问题核心**：现有内容增强方法（如超分辨率）在应用于边缘视频分析时存在**性能与精度的根本矛盾**。对**整个视频帧进行增强**会消耗海量计算资源，导致吞吐量极低，无法实时处理；而**选择性地增强部分关键帧**又会因信息复用造成精度大幅下降，无法满足AI分析任务的苛刻要求。
+
+### 2. 方法：提出一个名为 RegenHance 的系统，通过只增强关键区域来打破性能与精度的困境
+
+该系统通过三大创新组件，实现了高效率与高精度的平衡：
+
+- **基于宏块的区域重要性预测 (Macroblock-based Region Importance Prediction)**：采用视频编码中的**宏块 (`Macroblock`)** 作为基本单元，通过一个超轻量级预测模型，在原始低质量视频上**快速且准确地定位**出对分析精度提升最大的关键区域。
+
+- **区域感知的打包增强 (Region-aware Enhancement)**：将识别出的零散、不规则的关键区域高效地**“拼接打包”**成一个或多个紧凑的矩形张量。该过程被建模为一个**二维装箱问题 (`2D Bin Packing`)**，只对打包后的小尺寸张量进行增强，极大降低了计算开销。
+
+- **基于剖析的执行规划 (Profile-based Execution Planning)**：通过**离线剖析**各组件（解码、预测、增强、分析）在不同负载下的性能，在线为整个分析流水线**动态生成最优执行计划**，确保CPU/GPU资源被充分利用，最大化端到端吞吐量。
+
+### 3. 效果：在精度和吞吐量上全面超越SOTA方法，实现显著性能提升
+
+- **精度与吞吐量双重提升**：在目标检测和语义分割任务上，相比SOTA的帧级增强方法（如Nemo、NeuroScaler），**分析精度提升10-19%**，同时**端到端吞吐量提升2-3倍**。
+- **资源利用效率极高**：相比全帧增强，可节省**高达77%的GPU计算资源**，将宝贵的算力集中用于对分析任务真正有益的区域。
+- **强大的平台通用性**：在五种异构硬件平台（从云端A100到边缘Jetson）上均表现出**强大的鲁棒性和有效性**，证明了其在真实边缘计算场景中的实用价值。
 
