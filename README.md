@@ -7,6 +7,8 @@
 - [Spatialyze: A Geospatial Video Analytics System with Spatial-Aware Optimizations](#spatialyze-a-geospatial-video-analytics-system-with-spatial-aware-optimizations)
 - [Boosting Neural Representations for Videos with a Conditional Decoder](#boosting-neural-representations-for-videos-with-a-conditional-decoder)
 - [Region-based Content Enhancement for Efficient Video Analytics at the Edge](#region-based-content-enhancement-for-efficient-video-analytics-at-the-edge)
+- [Accelerating Aggregation Queries on Unstructured Streams of Data](#accelerating-aggregation-queries-on-unstructured-streams-of-data)
+
 
 ## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
 
