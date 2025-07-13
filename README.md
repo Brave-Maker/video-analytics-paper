@@ -9,6 +9,7 @@
 - [Region-based Content Enhancement for Efficient Video Analytics at the Edge](#region-based-content-enhancement-for-efficient-video-analytics-at-the-edge)
 - [Accelerating Aggregation Queries on Unstructured Streams of Data](#accelerating-aggregation-queries-on-unstructured-streams-of-data)
 - [COVA: Exploiting Compressed-Domain Analysis to Accelerate Video Analytics](#cova-exploiting-compressed-domain-analysis-to-accelerate-video-analytics)
+- [Gemel: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge](#gemel-model-merging-for-memory-Efficient-real-time-video-analytics-at-the-edge)
 
 ## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
 
