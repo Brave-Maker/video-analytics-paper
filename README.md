@@ -205,7 +205,7 @@ COVA 的核心思想是将分析任务**智能地拆分到两个域**中执行�
     - **瓶颈分析**：消融实验证明，COVA的流水线设计是有效的，其新的性能瓶颈取决于视频内容，可能落在解码阶段（对于运动密集的视频）或DNN推理阶段（对于运动稀疏的视频），但整体吞吐量远高于基线系统。
 
 
-### Gemel: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge
+## Gemel: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge
 **本文由UCLA、普林斯顿大学、微软研究院、浙江大学合作完成，发表在网络与系统领域顶级会议 NSDI '23。项目主页见 https://github.com/artpad6/gemel_nsdi23**
 
 ### 1. 动机：现有边缘视频分析系统在处理多模型实时任务时面临根本性的显存困境
@@ -256,7 +256,7 @@ Gemel在云端运行一套高效的启发式算法，以自动发现最佳的合
 *   消融实验证明，其增量式合并和自适应重训练等关键设计对于实现高性能至关重要。
 
 
-### Extract-Transform-Load for Video Streams
+## Extract-Transform-Load for Video Streams
 **本文由MIT CSAIL、亚利桑那大学、AWS、Intel Labs合作完成，发表在数据库顶级会议 PVLDB '23。项目主页见 https://github.com/ferdiko/vetl**
 
 ### 1. 动机：现有大规模视频流分析面临的困境
