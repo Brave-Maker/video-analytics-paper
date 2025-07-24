@@ -14,7 +14,7 @@
 - [GRACE: Loss-Resilient Real-Time Video through Neural Codecs](#grace-loss-resilient-real-time-video-through-neural-codecs)
 - [Edge-assisted Adaptive Configuration for Serverless-based Video Analytics](#edge-assisted-adaptive-configuration-for-serverless-based-video-analytics)
 - [PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale](#packetgame-multi-stream-packet-gating-for-concurrent-video-inference-at-scale)
-
+- [InFi: End-to-end Learnable Input Filter for Resource-efficient Mobile-centric Inference](#InFi-end-to-end-learnable-input-filter-for-resource-efficient-mobile-centric-inference)
 
 
 
@@ -142,7 +142,7 @@ AccDecoder 将视频分析流程分为三个步骤：
 
 
 ## Accelerating Aggregation Queries on Unstructured Streams of Data
-**本文由斯坦福大学、芝加哥大学、伊利诺伊大学厄巴纳-香槟分校合作完成，发表在数据库顶级会议 PVLDB '23。项目主页见 https://github.com/stanford-futuredata/InQuest**
+**本文由斯坦福大学、芝加哥大学、伊利诺伊大学厄巴纳-香槟分校合作完成，发表在会议 VLDB '23。项目主页见 https://github.com/stanford-futuredata/InQuest**
 
 ### 1. 动机：现有数据分析系统在处理非结构化数据流时面临根本性困境
 
@@ -175,7 +175,7 @@ InQuest 将数据流切分为 **数据段**（Segments）进行处理，其核�
 
 
 ## COVA: Exploiting Compressed-Domain Analysis to Accelerate Video Analytics
-**本文由韩国科学技术院（KAIST）与谷歌（Google）合作完成，发表在系统领域顶级会议 USENIX ATC '22。项目主页见 https://github.com/casys-kaist/CoVA**
+**本文由韩国科学技术院（KAIST）与谷歌（Google）合作完成，发表在会议 USENIX ATC '22。项目主页见 https://github.com/casys-kaist/CoVA**
 
 ### 1. 动机：现有视频分析系统在处理大规模视频数据时面临新的性能瓶颈
 
@@ -214,7 +214,7 @@ COVA 的核心思想是将分析任务**智能地拆分到两个域**中执行�
 
 
 ## Gemel: Model Merging for Memory-Efficient, Real-Time Video Analytics at the Edge
-**本文由UCLA、普林斯顿大学、微软研究院、浙江大学合作完成，发表在网络与系统领域顶级会议 NSDI '23。项目主页见 https://github.com/artpad6/gemel_nsdi23**
+**本文由UCLA、普林斯顿大学、微软研究院、浙江大学合作完成，发表在会议 NSDI '23。项目主页见 https://github.com/artpad6/gemel_nsdi23**
 
 ### 1. 动机：现有边缘视频分析系统在处理多模型实时任务时面临根本性的显存困境
 
@@ -265,7 +265,7 @@ Gemel在云端运行一套高效的启发式算法，以自动发现最佳的合
 
 
 ## Extract-Transform-Load for Video Streams
-**本文由MIT CSAIL、亚利桑那大学、AWS、Intel Labs合作完成，发表在数据库顶级会议 PVLDB '23。项目主页见 https://github.com/ferdiko/vetl**
+**本文由MIT CSAIL、亚利桑那大学、AWS、Intel Labs合作完成，发表在会议 PVLDB '23。项目主页见 https://github.com/ferdiko/vetl**
 
 ### 1. 动机：现有大规模视频流分析面临的困境
 
@@ -315,7 +315,7 @@ Skyscraper明确地管理三种资源，以应对工作负载的波动：
 *   它解决了V-ETL这一类重要但之前未被明确定义的问题，为大规模、低成本视频数据仓库的构建提供了第一个实用且高效的解决方案。
 
 ## GRACE: Loss-Resilient Real-Time Video through Neural Codecs
-**本文由芝加哥大学、斯坦福大学、微软、NVIDIA合作完成，发表在网络系统顶级会议 USENIX NSDI '24。项目主页见 https://uchi-jcl.github.io/grace.html**
+**本文由芝加哥大学、斯坦福大学、微软、NVIDIA合作完成，发表在会议 USENIX NSDI '24。项目主页见 https://uchi-jcl.github.io/grace.html**
 
 ### 1. 动机：现有实时视频抗丢包技术面临的困境
 
@@ -369,7 +369,7 @@ GRACE 的基石是**神经网络视频编解码器 (NVC)**。其强大的抗丢�
 
 
 ## Edge-assisted Adaptive Configuration for Serverless-based Video Analytics
-**本文由清华大学与华为合作完成，发表在分布式计算顶级会议 IEEE ICDCS '23，代码见：https://github.com/STAR-Tsinghua/ServerlessVideoAnalytics。**
+**本文由清华大学与华为合作完成，发表在会议 IEEE ICDCS '23，代码见：https://github.com/STAR-Tsinghua/ServerlessVideoAnalytics。**
 
 ### 1. 动机：现有视频分析系统面临成本与准确率的两难困境
 
@@ -414,7 +414,7 @@ GRACE 的基石是**神经网络视频编解码器 (NVC)**。其强大的抗丢�
 *   尽管配置（帧率、成本）在动态变化，最终的分析精度始终被**稳定地控制在用户设定的目标值附近**。
 
 ### PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale
-**本文由中国科学技术大学完成，发表在网络通信顶级会议 ACM SIGCOMM '23，代码见：https://github.com/yuanmu97/PacketGame。**
+**本文由中国科学技术大学完成，发表在会议 ACM SIGCOMM '23，代码见：https://github.com/yuanmu97/PacketGame。**
 
 ### 1. 动机：发现被忽视的解码瓶颈，限制大规模并发能力
 
@@ -450,6 +450,50 @@ GRACE 的基石是**神经网络视频编解码器 (NVC)**。其强大的抗丢�
 **与现有技术的互补性与优越性**：
 *   实验中最具说服力的对比显示，在一个已经使用 TensorRT 进行模型加速的系统上（并发能力为30路），再集成服务器端帧过滤技术 InFi，并发能力仅提升至35路（瓶颈仍在解码）。
 *   而将 InFi 替换为 PacketGame 后（`TRT+PacketGame`），系统的并发能力**上升至 169 路**，提升了近5倍。这证明了PacketGame在解决并发瓶颈上的独特价值和与现有技术的强大互补性。
+
+### InFi: End-to-end Learnable Input Filter for Resource-efficient Mobile-centric Inference
+**本文由中国科学技术大学完成，发表在会议 ACM MobiCom '22，代码见：https://github.com/yuanmu97/infi。**
+
+### 1. 动机：现有输入过滤器设计缺乏理论指导且适用性有限
+
+**问题核心：** 在移动端AI推理中，大量输入数据是冗余的（如不含人脸的图片、结果无变化的视频帧），直接对这些数据进行昂贵的推理计算造成了巨大的资源浪费。然而，现有的输入过滤方法存在三大瓶颈。
+*   **缺乏理论指导**：设计过滤器更像是一门“手艺”，依赖于反复试验。开发者无法预先判断一个AI任务是否“值得”被过滤，导致开发成本高且效果无法保证。
+*   **特征表示能力不足**：现有方法大多依赖手工设计的低级特征（如像素差、边缘信息）或通用的预训练模型特征。这些特征并非为“过滤”这个特定任务而优化，导致在多样化的AI任务中判别能力不足，过滤精度和效率低下。
+*   **适用场景局限**：大多数过滤器仅为特定数据类型（如图像）或特定部署模式（如云端卸载）设计，无法处理移动应用中常见的文本、传感器信号等数据，也无法支持模型分区（Model Partitioning）等更先进的部署模式。
+
+### 2. 方法：提出首个端到端可学习的通用输入过滤框架 (InFi)
+
+该框架的核心思想是，将输入过滤视为一个可学习的、端到端优化的任务。它不仅为“何时该过滤”提供了理论依据，还通过一个统一的框架解决了“如何高效过滤”的问题，极大地扩展了过滤技术的适用范围。
+
+**1. 核心理念：理论指导与端到端学习**
+*   **提出“可过滤性”理论 (Filterability)**：首次从计算学习理论出发，通过比较推理模型与其过滤器的“假设族复杂度”，为判断一个AI任务是否适合被过滤提供了理论指导，避免了盲目开发。
+*   **端到端可学习设计**：抛弃手工或固定特征，InFi的整个过滤模型（从特征提取到决策）都是为了“过滤”这个最终目标而协同优化的。这使得它能为每个具体任务学习到最具区分度的特征表示。
+*   **统一SKIP与REUSE**：巧妙地将“跳过型”过滤（SKIP）和“重用型”过滤（REUSE）统一到一个基于孪生网络（Siamese Network）思想的框架下，用一套模型解决了两种主流的过滤需求。
+
+**2. 关键系统设计与算法：InFi 的三大模块**
+*   **多模态特征网络 (Multi-modal Feature Networks)**：作为框架的“感知层”，InFi设计了一系列轻量级的特征提取器，使其成为首个原生支持**图像、视频、音频、文本、传感器信号**以及**模型中间层特征图**六种模态的过滤框架，极大地增强了通用性。
+*   **任务无关的分类器 (Task-agnostic Classifier)**：作为“决策核心”，它接收特征网络提取的嵌入向量，并作为一个**可学习的距离度量器**，计算出输入的冗余度分数。其结构通用，但参数会根据具体任务自适应优化。
+*   **双模式端到端训练 (Dual-mode End-to-end Training)**：作为“学习引擎”，InFi根据过滤模式采用不同的训练策略：
+    *   **SKIP模式**：视为一个**二元分类**问题，使用**交叉熵损失**进行训练。
+    *   **REUSE模式**：视为一个**度量学习**问题，使用对比损失（Contrastive Loss）进行训练，学习一个高效的度量空间。
+
+### 3. 效果：过滤效率和适用性全面领先，显著提升系统性能
+
+**过滤效率与性能增益**：
+*   与原始工作负载相比，在保证90%以上推理精度的前提下，InFi可为视频分析应用带来高达 **8.5倍** 的吞吐量提升，并节省 **95%** 的网络带宽。
+*   其自身的计算和能耗开销极低，在移动设备上的推理延迟仅为标准轻量级模型MobileNetV1的 **12-25%**。
+
+**与现有技术的互补性与优越性**：
+*   在与多种基线方法（FilterForward, Reducto, FoggyCache）的对比中，InFi在所有12个测试任务上均取得了显著更优的**准确率-过滤率**权衡曲线。
+*   其优越性根源在于**端到端学习到的定制化特征**。在许多基线方法因特征不适用而完全失效的任务上（如人脸检测、文本情感分析），InFi依然能保持高效过滤。
+*   得益于其通用设计，InFi是首个能成功应用于**模型分区**部署模式的输入过滤器，展现了其在支持未来移动AI架构上的独特价值。
+
+
+
+
+
+
+
 
 **强大的鲁棒性与通用性**：
 *   一系列微基准测试表明，PacketGame 对训练数据量不敏感，在不同的视频编码格式（H.264, H.265, VP9等）上均表现稳健，并且其设计可以轻松扩展以支持多任务视频分析。
