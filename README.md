@@ -15,7 +15,7 @@
 - [Edge-assisted Adaptive Configuration for Serverless-based Video Analytics](#edge-assisted-adaptive-configuration-for-serverless-based-video-analytics)
 - [PacketGame: Multi-Stream Packet Gating for Concurrent Video Inference at Scale](#packetgame-multi-stream-packet-gating-for-concurrent-video-inference-at-scale)
 - [InFi: End-to-end Learnable Input Filter for Resource-efficient Mobile-centric Inference](#InFi-end-to-end-learnable-input-filter-for-resource-efficient-mobile-centric-inference)
-
+- [MadEye: Boosting Live Video Analytics Accuracy with Adaptive Camera Configurations](#MadEye-boosting-live-video-analytics-accuracy-with-adaptive-camera-configurations)
 
 
 
@@ -489,14 +489,39 @@ GRACE 的基石是**神经网络视频编解码器 (NVC)**。其强大的抗丢�
 *   得益于其通用设计，InFi是首个能成功应用于**模型分区**部署模式的输入过滤器，展现了其在支持未来移动AI架构上的独特价值。
 
 
+### MadEye: Boosting Live Video Analytics Accuracy with Adaptive Camera Configurations
+**本文由普林斯顿大学、莱斯大学完成，发表在会议 USENIX NSDI '24，代码见：https://github.com/michaeldwong/madeye。**
 
+### 1. 动机：现有视频分析系统忽视了摄像头方向这一关键因素
 
+**问题核心：** 现有视频分析系统将摄像头视为一个被动的、固定的传感器，所有优化都集中在如何更高效地处理**已被捕获**的视频数据。然而，摄像头捕捉到的内容本身（即其方向、焦距）对最终分析的准确率有着决定性的影响，这一巨大的优化潜力被完全忽视了。主动调整摄像头方向面临三大瓶颈。
+*   **变化快难预测**：最佳的摄像头方向（能带来最高准确率的视角）变化极快，85%的变化在1秒内就会发生。依赖历史数据进行预测的传统方法（如多臂老虎机）因其滞后性而完全失效。
+*   **需求多样难统一**：不同的AI任务（如检测车辆 vs. 计数行人）、不同的模型、不同的物体，对“最佳方向”的定义天差地别。一个固定的方向或一种简单的调整策略，无法同时满足复杂工作负载下的多样化需求。
+*   **搜索空间巨大**：摄像头所有可能的方向（旋转、俯仰、变焦）构成了一个巨大的搜索空间，而其中的“最优解”既稀疏又转瞬即逝。盲目或暴力搜索在实时应用中是完全不可行的。
 
+### 2. 方法：提出首个通过自适应摄像头配置提升分析精度的协同框架 (MadEye)
 
+该框架的核心思想是，将摄像头从被动的传感器转变为主动的“智能体”，通过一个在摄像头和服务器之间高效协同的系统，实时地探索并选择能最大化整个工作负载分析精度的视角。
 
+**1. 核心理念：经验观察指导与“侦察兵+主力”协同架构**
+*   **经验观察指导**：系统设计并非盲目进行，而是基于对视频数据的三个关键经验性观察：（1）最佳方向在空间上是缓慢移动的；（2）高价值方向在空间上是聚集的；（3）相邻方向的准确率变化趋势是高度相关的。这些观察为设计高效的本地搜索算法提供了理论依据。
+*   **端到端协同优化**：MadEye是一个完整的端到端系统。服务器负责高精度推理和模型训练，而摄像头负责快速探索和初步筛选，二者紧密协作，共同优化“从捕捉到分析”的整个流程。
+*   **“近似模型+高精度模型”架构**：巧妙地将系统分工。摄像头上运行超轻量级的**近似模型**，其唯一任务是在极短时间内快速评估大量潜在方向的价值；服务器则保留高精度的**高精度模型**，只对近似模型筛选出的最有价值的图像进行精确打击，从而实现资源效率和准确率的平衡。
 
-**强大的鲁棒性与通用性**：
-*   一系列微基准测试表明，PacketGame 对训练数据量不敏感，在不同的视频编码格式（H.264, H.265, VP9等）上均表现稳健，并且其设计可以轻松扩展以支持多任务视频分析。
+**2. 关键系统设计与算法：MadEye 的三大模块**
+*   **近似模型与知识蒸馏 (Approximation Model & Knowledge Distillation)**：作为框架的“感知层”，MadEye不为每个任务设计专用模型，而是统一采用一个轻量级**物体检测器**作为通用近似模型。该模型通过**知识蒸馏**从服务器端的重型模型中学习其“偏好”，并能通过**持续学习**不断自适应场景变化。
+*   **快速本地搜索算法 (Fast Local Search Algorithm)**：作为“决策核心”，这是在摄像头本地运行的高效算法。它在每个时间步内，动态维护一个由连续方向组成的“探索区域”，并基于近似模型的快速评估结果，智能地用更有潜力的新方向替换掉表现最差的旧方向。
+*   **服务器-摄像头协同训练与推理 (Server-Camera Co-training and Inference)**：作为“学习和执行引擎”，服务器不仅负责对摄像头筛选出的最佳图像进行最终的高精度推理，还承担着训练、更新和下发近似模型的任务，形成了一个完整的“探索-验证-学习”闭环。
 
+### 3. 效果：分析准确率和资源效率全面领先，开辟优化新维度
 
+**准确率与资源效率增益**：
+*   与最优的固定摄像头方案相比，在消耗同等资源的前提下，MadEye可将视频分析任务的中位数准确率提升 **2.9% - 25.7%**。
+*   反之，要达到与MadEye相同的准确率，需要部署 **2-3.7倍** 数量的固定摄像头，这意味着MadEye能带来巨大的硬件和带宽成本节省。
+*   其自身算法在边缘设备（Jetson Nano）上的开销极低，完全满足实时运行要求。
+
+**与现有技术的互补性与优越性**：
+*   在与多种摄像头自适应基线方法（Panoptes, MAB, Tracking）的对比中，MadEye的准确率取得了全面、压倒性的领先（例如，比MAB高**5.8倍**）。
+*   其优越性根源在于其决策是基于**当前场景的实时内容**，而非依赖过时的历史数据或简单的规则。这使其能更快速、更精准地响应动态变化的场景。
+*   MadEye可以和现有的其他视频流优化技术（如Chameleon）**完美互补**，在其他技术节省资源的基础上，进一步“免费”地提升系统准确率。
 
