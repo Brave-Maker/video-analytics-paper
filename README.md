@@ -17,7 +17,7 @@
 - [InFi: End-to-end Learnable Input Filter for Resource-efficient Mobile-centric Inference](#InFi-end-to-end-learnable-input-filter-for-resource-efficient-mobile-centric-inference)
 - [MadEye: Boosting Live Video Analytics Accuracy with Adaptive Camera Configurations](#MadEye-boosting-live-video-analytics-accuracy-with-adaptive-camera-configurations)
 - [NeuroScaler: Neural Video Enhancement at Scale](#NeuroScaler-neural-video-enhancement-at-scale)
-- [NEMO: Enabling Neural-enhanced Video Streaming on Commodity Mobile Devices](NEMO-enabling-neural-enhanced-video-streaming-on-commodity-mobile-devices)
+- [NEMO: Enabling Neural-enhanced Video Streaming on Commodity Mobile Devices](#NEMO-enabling-neural-enhanced-video-streaming-on-commodity-mobile-devices)
 
 
 ## AccDecoder: Accelerated Decoding for Neural-enhanced Video Analytics
